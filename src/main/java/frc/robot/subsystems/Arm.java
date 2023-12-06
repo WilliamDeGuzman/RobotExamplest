@@ -7,7 +7,6 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import com.revrobotics.CANSparkMax;
-import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Arm extends SubsystemBase {
@@ -24,11 +23,11 @@ public class Arm extends SubsystemBase {
     extensionMotor.set(volt);
   }
 
-  public double getExtensionPosition (){
+  public double getExtensionPosition() {
     return extensionMotor.getEncoder().getPosition();
   }
 
-  public double getRotationPosition (){
+  public double getRotationPosition() {
     return rotationMotor.getEncoder().getPosition();
   }
 
